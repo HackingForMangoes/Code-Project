@@ -1,0 +1,214 @@
+import random
+numberOfPlayers = int(input('Enter the amount of players:'))
+startingMoney = int(input('input a number for starting points:'))
+foldValue = int(input('input the fold value:'))
+if numberOfPlayers == 1:
+    score1 = startingMoney
+if numberOfPlayers == 2:
+    score1 = startingMoney
+    score2 = startingMoney
+if numberOfPlayers == 3:
+    score1 = startingMoney
+    score2 = startingMoney
+    score3 = startingMoney
+if numberOfPlayers == 4:
+    score1 = startingMoney
+    score2 = startingMoney
+    score3 = startingMoney
+    score4 = startingMoney
+if numberOfPlayers == 5:
+    score1 = startingMoney
+    score2 = startingMoney
+    score3 = startingMoney
+    score4 = startingMoney
+    score5 = startingMoney
+if numberOfPlayers == 6:
+    score1 = startingMoney
+    score2 = startingMoney
+    score3 = startingMoney
+    score4 = startingMoney
+    score5 = startingMoney
+    score6 = startingMoney
+if numberOfPlayers == 7:
+    score1 = startingMoney
+    score2 = startingMoney
+    score3 = startingMoney
+    score4 = startingMoney
+    score5 = startingMoney
+    score6 = startingMoney
+    score7 = startingMoney
+if numberOfPlayers == 8:
+    score1 = startingMoney
+    score2 = startingMoney
+    score3 = startingMoney
+    score4 = startingMoney
+    score5 = startingMoney
+    score6 = startingMoney
+    score7 = startingMoney
+    score8 = startingMoney
+if numberOfPlayers == 9:
+    score1 = startingMoney
+    score2 = startingMoney
+    score3 = startingMoney
+    score4 = startingMoney
+    score5 = startingMoney
+    score6 = startingMoney
+    score7 = startingMoney
+    score8 = startingMoney
+    score9 = startingMoney
+if numberOfPlayers == 1:
+    player1Name = input("Input player 1's name:")
+    for i in range(50):
+        minus1 = int(input('input a number for '+ player1Name +':'))
+        youWon = random.randint(1,numberOfPlayers)
+        while score1 < minus1:
+            print('Unsufficent funds')
+            minus1 = int(input('input a number for ' + player1Name + ':'))
+        if youWon == 1:
+            print('Congrats player 1 you won,'+ minus1 +'dollars!')
+            score1 += minus1
+        score1 -= minus1
+        print('The score for '+ player1Name + 'is' + score1)
+if numberOfPlayers == 2:
+    player1Name = input("Input player 1's name:")
+    player2Name = input("Input player 2's name:")
+    for i in range(50):
+        addMore2input = 1
+        addMore1input = 1
+        task1 = 1
+        youWon = random.randint(1,numberOfPlayers)
+        minus1 = int(input('input a number for '+player1Name+':'))
+        while score1 < minus1:
+            print('Unsufficent funds')
+            minus1 = int(input('input a number for '+ player1Name))
+        minus2 = int(input('input a number for '+player1Name+':'))
+        while score2 < minus2:
+            print('Unsufficent funds')
+            minus2 = int(input('input a number for player 2:'))
+        if minus1 == minus2:
+            pass
+        else:
+            while task1 == 1:
+                if minus1 < minus2:
+                    addMore1 = input('Players, '+player1Name + ' and, '+ player2Name +' do not have an equal values does '+ player1Name +'want to fold? y/n')
+                    if addMore1 == 'y':
+                        score1 -= foldValue
+                        task1 += 1
+                        pass
+                    if addMore1 == 'n':
+                        minus1 = int(input('input a number for '+ player1Name))
+                        
+                if minus2 < minus1:
+                    addMore2input = input('Players 1 and 2 do not have an equal values does player 2 want to fold? y/n')
+        if youWon == 1:
+            print('Congrats player 1 you won,', minus1+minus2,'dollars!')
+            if addMore2input == 'y':
+                score1 += minus1 + minus2 + foldValue
+                score2 -= minus1 + minus2 + foldValue
+            else:
+                score1 += minus1 + minus2
+                score2 -= minus1 + minus2
+        if youWon == 2:
+            print('Congrats player 2 you won,', minus1+minus2,'dollars!')
+            score1 -= minus1 + minus2
+            score2 += minus1 + minus2
+        print(score1)
+        print(score2)
+if numberOfPlayers == 3:
+    for i in range(50):
+        score1 -= int(input('input a number:'))
+        score2 -= int(input('input a number:'))
+        score3 -= int(input('input a number:'))
+        print(score1)
+        print(score2)
+        print(score3)
+if numberOfPlayers == 4:
+    for i in range(50):
+        score1 -= int(input('input a number:'))
+        score2 -= int(input('input a number:'))
+        score3 -= int(input('input a number:'))
+        score4 -= int(input('input a number:'))
+        print(score1)
+        print(score2)
+        print(score3)
+        print(score4)
+if numberOfPlayers == 5:
+    for i in range(50):
+        score1 -= int(input('input a number:'))
+        score2 -= int(input('input a number:'))
+        score3 -= int(input('input a number:'))
+        score4 -= int(input('input a number:'))
+        score5 -= int(input('input a number:'))
+        print(score1)
+        print(score2)
+        print(score3)
+        print(score4)
+        print(score5)
+if numberOfPlayers == 6:
+    for i in range(50):
+        score1 -= int(input('input a number:'))
+        score2 -= int(input('input a number:'))
+        score3 -= int(input('input a number:'))
+        score4 -= int(input('input a number:'))
+        score5 -= int(input('input a number:'))
+        score6 -= int(input('input a number:'))
+        print(score1)
+        print(score2)
+        print(score3)
+        print(score4)
+        print(score5)
+        print(score6)
+if numberOfPlayers == 7:
+    for i in range(50):
+        score1 -= int(input('input a number:'))
+        score2 -= int(input('input a number:'))
+        score3 -= int(input('input a number:'))
+        score4 -= int(input('input a number:'))
+        score5 -= int(input('input a number:'))
+        score6 -= int(input('input a number:'))
+        score7 -= int(input('input a number:'))
+        print(score1)
+        print(score2)
+        print(score3)
+        print(score4)
+        print(score5)
+        print(score6)
+        print(score7)
+if numberOfPlayers == 8:
+    for i in range(50):
+        score1 -= int(input('input a number:'))
+        score2 -= int(input('input a number:'))
+        score3 -= int(input('input a number:'))
+        score4 -= int(input('input a number:'))
+        score5 -= int(input('input a number:'))
+        score6 -= int(input('input a number:'))
+        score7 -= int(input('input a number:'))
+        score8 -= int(input('input a number:'))
+        print(score1)
+        print(score2)
+        print(score3)
+        print(score4)
+        print(score5)
+        print(score6)
+        print(score7)
+        print(score8)
+if numberOfPlayers == 9:
+    for i in range(50):
+        score1 -= int(input('input a number:'))
+        score2 -= int(input('input a number:'))
+        score3 -= int(input('input a number:'))
+        score4 -= int(input('input a number:'))
+        score5 -= int(input('input a number:'))
+        score6 -= int(input('input a number:'))
+        score7 -= int(input('input a number:'))
+        score8 -= int(input('input a number:'))
+        score9 -= int(input('input a number:'))
+        print(score1)
+        print(score2)
+        print(score3)
+        print(score4)
+        print(score5)
+        print(score6)
+        print(score7)
+        print(score8)
+        print(score9)
